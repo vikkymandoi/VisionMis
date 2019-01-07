@@ -6,7 +6,9 @@ import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JSeparator;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 import com.uni.app.main.utility.IConstants;
 
@@ -24,7 +26,7 @@ public class ConnectionPanel extends JPanel {
 	public ConnectionPanel() {
 		setLayout(null);
 		setSize(IConstants.CONNECTION_PANEL_WIDTH, IConstants.CONNECTION_PANEL_HEIGHT);
-		setBackground(Color.YELLOW);
+		setBackground(Color.WHITE);
 		setBorder(BorderFactory.createTitledBorder("Connection"));
 		
 		JLabel lblHost = new JLabel("Host:");
@@ -54,10 +56,10 @@ public class ConnectionPanel extends JPanel {
 		serviceNameTxt.setBounds(98, 67, 250, 25);
 		add(serviceNameTxt);
 		
-		Component horizontalStrut = Box.createHorizontalStrut(20);
-		horizontalStrut.setBounds(0, 112, 360, 3);
+		JSeparator horizontalStrut = new JSeparator(SwingConstants.HORIZONTAL);
+		horizontalStrut.setBounds(2, 107, IConstants.CONNECTION_PANEL_WIDTH-5, 2);
 		horizontalStrut.setVisible(true);
-		horizontalStrut.setBackground(Color.BLACK);
+		horizontalStrut.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
 		add(horizontalStrut);
 		
 		JLabel lblUserName = new JLabel("User Name:");
