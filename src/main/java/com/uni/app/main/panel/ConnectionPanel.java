@@ -12,9 +12,6 @@ import javax.swing.SwingConstants;
 
 import com.uni.app.main.utility.IConstants;
 
-import java.awt.Component;
-import javax.swing.Box;
-
 public class ConnectionPanel extends JPanel {
 	private static final long serialVersionUID = 8056391156258849167L;
 	private JTextField hostFieldTxt;
@@ -25,7 +22,7 @@ public class ConnectionPanel extends JPanel {
 
 	public ConnectionPanel() {
 		setLayout(null);
-		setSize(IConstants.CONNECTION_PANEL_WIDTH, IConstants.CONNECTION_PANEL_HEIGHT);
+		setSize(IConstants.LEFT_PANEL_WIDTH, IConstants.CONNECTION_PANEL_HEIGHT);
 		setBackground(Color.WHITE);
 		setBorder(BorderFactory.createTitledBorder("Connection"));
 		
@@ -57,7 +54,7 @@ public class ConnectionPanel extends JPanel {
 		add(serviceNameTxt);
 		
 		JSeparator horizontalStrut = new JSeparator(SwingConstants.HORIZONTAL);
-		horizontalStrut.setBounds(2, 107, IConstants.CONNECTION_PANEL_WIDTH-5, 2);
+		horizontalStrut.setBounds(2, 107, IConstants.LEFT_PANEL_WIDTH-5, 2);
 		horizontalStrut.setVisible(true);
 		horizontalStrut.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
 		add(horizontalStrut);
